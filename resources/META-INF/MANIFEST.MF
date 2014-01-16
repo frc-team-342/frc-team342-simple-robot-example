@@ -1,0 +1,6 @@
+MIDlet-Name: frc-team-342-simple-robot-example
+MIDlet-Version: 1.0.0
+MIDlet-Vendor: FIRST
+MIDlet-1: SimpleRobotExample, , org.first.team342.SimpleRobotExample
+MicroEdition-Profile: IMP-1.0
+MicroEdition-Configuration: CLDC-1.1
