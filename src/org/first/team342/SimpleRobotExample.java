@@ -49,8 +49,14 @@ public class SimpleRobotExample extends SimpleRobot {
         double startTime = timer.get();
         double targetTime = (startTime + AUTONOMOUS_DRIVE_TIME);
         
-        if (timer.get() < targetTime) {
-            this.drivetrain.arcadeDrive(AUTONOMOUS_DRIVE_SPEED, 0.0);
+        while (this.isEnabled() && this.isAutonomous()) {
+            if (timer.get() < targetTime) {
+                // Drive forward.
+                this.drivetrain.arcadeDrive(AUTONOMOUS_DRIVE_SPEED, 0.0);
+            } else {
+                // Stop Driving.
+                this.drivetrain.arcadeDrive(0.0, 0.0);
+            }
         }
     }
 
